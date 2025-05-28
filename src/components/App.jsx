@@ -2,8 +2,11 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import About from "./about/about";
-import Contact from "./Contact/Contact";
+import Contact from "./contact/Contact";
 import Information from "./Information/Information";
+import Company from "./company/Company";
+import Products from "./products/Products";
+import Videos from "./Videos/Videos";
 
 function App() {
   return (
@@ -11,6 +14,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<About />} />
+        <Route path="/company" element={<Company />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/videos" element={<Videos />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/information" element={<Information />} />
       </Routes>

@@ -17,7 +17,7 @@ export default function NavBar() {
         </li>
         <li className="nav__item">
           <NavLink
-            to="/empresa"
+            to="/company"
             className={({ isActive }) =>
               "menu__link" + (isActive ? " menu__link_active" : "")
             }
