@@ -7,19 +7,23 @@ import Information from "./Information/Information";
 import Company from "./company/Company";
 import Products from "./products/Products";
 import Videos from "./Videos/Videos";
+import Main from "./main/main";
 
 function App() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<About />} />
-        <Route path="/company" element={<Company />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/videos" element={<Videos />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/information" element={<Information />} />
-      </Routes>
+      <Main>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/company" element={<Company />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/information" element={<Information />} />
+        </Routes>
+      </Main>
+
       <Footer />
     </>
   );
