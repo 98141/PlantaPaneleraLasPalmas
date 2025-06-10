@@ -1,10 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .carousel__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   perspective: 1000px;
-  height: 50vh;
+  height: 63vh;
 }
 
 .scene {
@@ -33,6 +39,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.carousel__cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Muy importante */
+  display: block;
 }
 
 .buttons {
@@ -48,4 +62,21 @@ button {
   margin: 0 10px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 100px) and (max-width: 767px) {
+  .carousel__wrapper {
+    height: 53vh;
+  }
+
+  .carousel__cell {
+    width: 300px; /* ← más ancho */
+    height: 200px; /* ← más alto */
+  }
+
+  .scene {
+  width: 300px;
+  height: 200px;
+}
+
 }

@@ -1,12 +1,12 @@
 import { useRef, useEffect, useState } from "react";
 
 const images = [
-  "../../../images/carrusel/imagen_1.jpg",
-  "../../../images/carrusel/imagen_2.jpg",
-  "../../../images/carrusel/imagen_3.jpg",
-  "../../../images/carrusel/imagen_4.jpg",
-  "../../../images/carrusel/imagen_5.jpg",
-  "../../../images/carrusel/imagen_6.jpg",
+  "../../../../images/imgCarrusel/imagen_1.jpg",
+  "../../../../images/imgCarrusel/imagen_2.jpg",
+  "../../../../images/imgCarrusel/imagen_3.jpg",
+  "../../../../images/imgCarrusel/imagen_4.jpg",
+  "../../../../images/imgCarrusel/imagen_5.jpg",
+  "../../../../images/imgCarrusel/imagen_6.jpg",
 ];
 
 function Carrusel() {
@@ -33,7 +33,7 @@ function Carrusel() {
     carouselRef.current.style.transform = `translateZ(-${radius}px) rotateY(${angle}deg)`;
   };
 
-    // Rotar automáticamente
+  // Rotar automáticamente
   useEffect(() => {
     const interval = setInterval(() => {
       setSelectedIndex((prevIndex) => {
@@ -44,31 +44,28 @@ function Carrusel() {
       });
     }, 5000); // cada 5 segundos
 
-     return () => clearInterval(interval); // limpieza al desmontar
+    return () => clearInterval(interval); // limpieza al desmontar
   }, [theta, radius]);
 
   return (
-
-
-      <div className="carousel__wrapper">
-        <div className="scene">
-          <div className="carousel" ref={carouselRef}>
-            {images.map((src, index) => (
-              <img
-                className="carousel__cell"
-                key={index}
-                src={src}
-                alt={`img-${index}`}
-              />
-            ))}
-          </div>
-        </div>
-        <div className="buttons">
-          <button onClick={() => rotateCarousel(-1)}>◀</button>
-          <button onClick={() => rotateCarousel(1)}>▶</button>
+    <div className="carousel__wrapper">
+      <div className="scene">
+        <div className="carousel" ref={carouselRef}>
+          {images.map((src, index) => (
+            <img
+              className="carousel__cell"
+              key={index}
+              src={src}
+              alt={`img-${index}`}
+            />
+          ))}
         </div>
       </div>
-
+      <div className="buttons">
+        <button onClick={() => rotateCarousel(-1)}>◀</button>
+        <button onClick={() => rotateCarousel(1)}>▶</button>
+      </div>
+    </div>
   );
 }
 
