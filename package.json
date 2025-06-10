@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://98141.github.io/plantapaneleralaspalmas",
+  "homepage": "https://98141.github.io/plantapaneleralaspalmas/",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
