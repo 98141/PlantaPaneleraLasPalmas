@@ -1,0 +1,51 @@
+.carousel__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  height: 50vh;
+}
+
+.scene {
+  width: 400px;
+  height: 300px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  object-fit: cover;
+}
+
+.carousel__cell {
+  position: absolute;
+  width: 400px; /* ← más ancho */
+  height: 300px; /* ← más alto */
+  object-fit: cover; /* asegura que la imagen cubra todo el espacio */
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  background: #29b6f6;
+  color: white;
+  font-size: 20px;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}

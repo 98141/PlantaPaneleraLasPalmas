@@ -1,6 +1,6 @@
 .footer__container-img {
   background-color: #6a4f3a;
-  background-image: url("../images/cana_dibjo.jpg");
+  background-image: url("../images/siembra_cana.png");
   width: 100%;
   height: auto;
   background-repeat: no-repeat;
@@ -25,7 +25,7 @@
   display: flex;
   justify-content: space-between;
   background-color: #f8f1e4;
-  padding: 50px;
+  padding: 10px;
 }
 
 .footer__container-information {
