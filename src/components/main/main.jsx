@@ -1,8 +1,9 @@
-export default function Main() {
-    return (
-        <div>
-        <h1>Main</h1>
-        <p>This is the about page.</p>
-        </div>
-    );
+function Main({ children }) {
+  return (
+    <main>
+      {children}
+    </main>
+  );
 }
+
+export default Main;

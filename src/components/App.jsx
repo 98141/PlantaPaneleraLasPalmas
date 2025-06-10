@@ -11,11 +11,11 @@ import Main from "./main/main";
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       <Header />
       <Main>
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<About />} />
           <Route path="/company" element={<Company />} />
           <Route path="/products" element={<Products />} />
           <Route path="/videos" element={<Videos />} />
@@ -25,7 +25,7 @@ function App() {
       </Main>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

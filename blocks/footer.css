@@ -1,27 +1,108 @@
-.footer__copyright {
-  color: #545454;
-  font-family: Inter;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21.78px;
-  max-width: 318px;
+.footer__container-img {
+  background-color: #6a4f3a;
+  background-image: url("../images/cana_dibjo.jpg");
   width: 100%;
-  height: 18px;
-  margin-bottom: 60px;
-
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-@media screen and (min-width: 768px) and  (max-width:1023px) {
-
+.footer__container-paragraph {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-style: italic;
+  font-size: 50px;
+  max-width: 70%;
+  text-align: center;
+  color: white;
+  margin: auto;
+  padding: 50px 0;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
-@media screen and (min-width: 320px) and  (max-width:767px) {
-  .footer__copyright {
-    margin: auto;
-    margin-bottom: 36px;
-    max-width: 282px;
-    font-size: 14px;
-    line-height: 16.94px;
-    height: 14px;
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f8f1e4;
+  padding: 50px;
+}
+
+.footer__container-information {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+
+.footer__container-redes a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 50px;
+  transition: color 0.3s ease;
+}
+
+.footer__container-redes a:hover {
+  color: #6a4f3a;
+}
+
+.footer__container-author {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  background-color: #6a4f3a;
+  color: white;
+}
+
+.footer__container-author-information {
+  margin-right: 40px;
+}
+
+.link {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1500px) {
+  .footer__container-paragraph {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer__container-paragraph {
+    font-size: 30px;
+    max-width: 100%;
+    margin: 0 20px;
+    padding: 25px 0;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 767px) {
+  .footer__container-paragraph {
+    font-size: 25px;
+    max-width: 100%;
+    margin: 0 20px;
+    padding: 25px 0;
+  }
+
+  .footer__container {
+    padding: 10px;
+  }
+
+  .footer__container-information {
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+  }
+
+  .footer__container-redes a {
+    font-size: 25px;
   }
 }

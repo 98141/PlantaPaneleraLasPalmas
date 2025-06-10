@@ -16,7 +16,7 @@ nav ul{
 
 /* Estilos de actividad del menu */
 .menu__link {
-  color: #9cbbff;
+  color: white;
   text-decoration: none;
   font-size: 25px;
   line-height: 30px;
@@ -28,7 +28,7 @@ nav ul{
 }
 
 .menu__link_active {
-  color: #ff6943;
+  color: #d1a677;
   pointer-events: none;
 }
 
