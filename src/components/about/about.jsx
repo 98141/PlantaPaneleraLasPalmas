@@ -1,4 +1,5 @@
 import Carrusel from "./carrusel/carrusel";
+import Products from "./products/Products";
 
 export default function About() {
   return (
@@ -16,6 +17,9 @@ export default function About() {
           className="about__message-img"
         />
       </div>
+      <section className="products">
+        <Products />
+      </section>
     </div>
   );
 }
