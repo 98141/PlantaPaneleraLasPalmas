@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="footer__container-redes">
           <p className="footer__container-information">Siguenos en:</p>
           <a href="https://www.facebook.com/trapichelaspalmas/" target="_blank">
-            <i className="fab fa-facebook-f"></i>
+            <i className="fab fa-facebook-f">f</i>
           </a>
         </div>
       </div>
@@ -35,7 +35,7 @@ export default function Footer() {
             className="link"
             target="_blank"
           >
-            © 2023 Armando Mora.
+            © 2025 Armando Mora.
           </a>
         </p>
       </div>
