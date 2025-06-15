@@ -28,9 +28,9 @@
 }
 
 .filosofia__item:hover {
-  animation: orbita 6s infinite ease-in-out;
-  border: 4px solid #f8f4eb; /* Inicial */
-  border-radius: 10px;
+  animation: orbita 5s infinite ease-in-out;
+  border: 5px solid #f8f4eb; /* Inicial */
+  border-radius: 8px;
 }
 
 .item-0 {
@@ -82,25 +82,26 @@
 @keyframes orbita {
   0% {
     transform: translate(0, 0);
-    border-color: #ebc161;
+    box-shadow: 0 0 10px #ebc161;
   }
   25% {
-    transform: translate(7px, -7px);
-    border-color: #f8f4eb;
+    transform: translate(5px, -5px);
+    box-shadow: 0 0 15px #ebc161;
   }
   50% {
-    transform: translate(0, -15px);
-    border-color: #ebc161;
+    transform: translate(0, -10px);
+    box-shadow: 0 0 20px #ebc161;
   }
   75% {
-    transform: translate(-7px, -7px);
-    border-color: #f8f4eb;
+    transform: translate(-5px, -5px);
+    box-shadow: 0 0 15px #f8f4eb;
   }
   100% {
     transform: translate(0, 0);
-    border-color: #d19915;
+    box-shadow: 0 0 20px #ebc161;
   }
 }
+
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 }

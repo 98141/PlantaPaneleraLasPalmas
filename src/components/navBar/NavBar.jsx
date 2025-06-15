@@ -27,7 +27,8 @@ export default function NavBar() {
         </li>
         <li className="nav__item">
           <NavLink
-            to="/products"
+            to="/productos"
+            end={false} 
             className={({ isActive }) =>
               "menu__link" + (isActive ? " menu__link_active" : "")
             }

@@ -8,6 +8,7 @@ import Company from "./company/Company";
 import Products from "./products/Products";
 import Videos from "./Videos/Videos";
 import Main from "./main/main";
+import ProductDetail from "./products/productsDetail/ProductDetail";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/company" element={<Company />} />
-          <Route path="/products" element={<Products />} />
+          <Route path="/productos" element={<Products />} />
+          <Route path="/productos/:productId" element={<ProductDetail />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/information" element={<Information />} />

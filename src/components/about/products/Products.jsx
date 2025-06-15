@@ -1,16 +1,18 @@
+import { Link } from "react-router-dom";
+
 export default function Products() {
   const images = [
     {
       src: "../../../../images/imgProoducts/mermelada.jpg",
       title: "Mermelada con panela",
       description:
-        "Un día soleado en el cultivo de caña de azúcar en el Valle del Cauca.",
+        "Un día soleado en el cultivo de caña de azúcar en Sandoná Nariño.",
     },
     {
       src: "../../../../images/imgProoducts/panela_cuadro.jpg",
       title: "Panela Cuadrada ",
       description:
-        "Extracción artesanal del jugo de la caña en un trapiche de madera.",
+        "Extracción  del jugo de la caña en un trapiche.",
     },
     {
       src: "../../../../images/imgProoducts/panela_pulverizada.jpg",
@@ -32,7 +34,9 @@ export default function Products() {
         <div className="galeria">
           {images.map((img, index) => (
             <div key={index} className="galeria__item">
-              <img src={img.src} alt={img.title} className="galeria__img" />
+              <Link to={`/productos/`}>
+                <img src={img.src} alt={img.title} className="galeria__img" />
+              </Link>
               <h3 className="galeria__titulo">{img.title}</h3>
               <p className="galeria__descripcion">{img.description}</p>
             </div>

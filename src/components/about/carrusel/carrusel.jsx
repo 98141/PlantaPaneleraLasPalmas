@@ -14,7 +14,7 @@ function Carrusel() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const cellCount = images.length;
   const theta = 360 / cellCount;
-  const radius = 500 / (2 * Math.tan(Math.PI / cellCount)); // ajusta según tamaño
+  const radius = 750 / (2 * Math.tan(Math.PI / cellCount)); // ajusta según tamaño
 
   // Posicionamiento inicial las imagenes en circulo
   useEffect(() => {

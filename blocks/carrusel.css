@@ -14,10 +14,11 @@
 }
 
 .scene {
-  width: 400px;
-  height: 300px;
+  width: 700px;
+  height: 600px;
   position: relative;
   perspective: 1000px;
+  overflow: hidden;
 }
 
 .carousel {
@@ -31,8 +32,8 @@
 
 .carousel__cell {
   position: absolute;
-  width: 400px; /* ← más ancho */
-  height: 300px; /* ← más alto */
+  width: 600px; /* ← más ancho */
+  height: 500px; /* ← más alto */
   object-fit: cover; /* asegura que la imagen cubra todo el espacio */
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
@@ -59,7 +60,7 @@ button {
   font-size: 20px;
   border: none;
   padding: 10px 20px;
-  margin: 0 10px;
+  margin: 0 10px 15px;
   border-radius: 5px;
   cursor: pointer;
 }
