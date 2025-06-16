@@ -8,7 +8,7 @@ export default function Header() {
         <Link to={`/`}>
           <img
             className="header__logo"
-            src="../../../images/logo_3.webp"
+            src="../../../images/PP FINAL.png"
             alt="Logo Planta Panelera las Palmas"
           />
         </Link>

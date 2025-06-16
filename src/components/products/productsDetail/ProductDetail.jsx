@@ -1,34 +1,38 @@
-import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const products = [
   {
     id: "mermelada",
-    src: "../../../../images/imgProoducts/mermelada.jpg",
     title: "Mermelada con panela",
     description:
       "Un día soleado en el cultivo de caña de azúcar en el Valle del Cauca.",
+    images: [
+      "../../../../images/imgProoducts/mermelada.jpg",
+      "../../../../images/imgProoducts/fresa.jpg",
+      "../../../../images/imgProoducts/piña.jpg",
+    ],
   },
   {
     id: "panela_cuadro",
-    src: "../../../../images/imgProoducts/panela_cuadro.jpg",
     title: "Panela Cuadrada ",
     description:
       "Extracción artesanal del jugo de la caña en un trapiche de madera.",
+    images: ["../../../../images/imgProoducts/panela_cuadro.jpg"],
   },
   {
     id: "panela_pulverizada",
-    src: "../../../../images/imgProoducts/panela_pulverizada.jpg",
     title: "Panela Pulverizada",
     description:
       "Un día soleado en el cultivo de caña de azúcar en el Valle del Cauca.",
+    images: ["../../../../images/imgProoducts/panela_pulverizada.jpg"],
   },
   {
     id: "panela_redonda",
-    src: "../../../../images/imgProoducts/panela_redonda.jpg",
     title: "Panela redonda",
     description:
       "Extracción artesanal del jugo de la caña en un trapiche de madera.",
+    images: ["../../../../images/imgProoducts/panela_redonda.jpg"],
   },
 ];
 
@@ -36,16 +40,42 @@ export default function ProductDetail() {
   const navigate = useNavigate();
   const { productId } = useParams();
   const product = products.find((p) => p.id === productId);
+  const [index, setIndex] = useState(0);
 
   if (!product) return <h2>Producto no encontrado</h2>;
+
+  const nextImage = () => {
+    setIndex((prev) => (prev + 1) % product.images.length);
+  };
+
+  const prevImage = () => {
+    setIndex(
+      (prev) => (prev - 1 + product.images.length) % product.images.length
+    );
+  };
 
   return (
     <div className="producto__detalle">
       <h1 className="detalle__titulo">{product.title}</h1>
       <div className="detalle__contenido">
-        <img src={product.src} alt={product.title} className="detalle__img" />
+        <div className="detalle__carousel">
+          <button className="carousel__btn" onClick={prevImage}>
+            ⟨
+          </button>
+          <img
+            src={product.images[index]}
+            alt={`Vista ${index + 1}`}
+            className="detalle__img"
+          />
+          <button className="carousel__btn" onClick={nextImage}>
+            ⟩
+          </button>
+        </div>
         <p className="detalle__descripcion">{product.description}</p>
-        <button className="detalle__botton" onClick={() => navigate(`/productos`)}>
+        <button
+          className="detalle__botton"
+          onClick={() => navigate(`/productos`)}
+        >
           Ver más
         </button>
       </div>

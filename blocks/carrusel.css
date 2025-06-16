@@ -1,83 +1,64 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-.carousel__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  perspective: 1000px;
-  height: 63vh;
-}
-
-.scene {
-  width: 700px;
-  height: 600px;
+.carousel-container {
+  width: 100%;
+  height: 50vh;
   position: relative;
-  perspective: 1000px;
-  overflow: hidden;
+  perspective: 1500px;
 }
 
 .carousel {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 1s;
-  object-fit: cover;
-}
-
-.carousel__cell {
   position: absolute;
-  width: 600px; /* ← más ancho */
-  height: 500px; /* ← más alto */
-  object-fit: cover; /* asegura que la imagen cubra todo el espacio */
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  top: 25%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transition: none;
 }
 
-.carousel__cell img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* Muy importante */
-  display: block;
+.carousel.active {
+  transition: transform 1s ease-in-out;
 }
 
-.buttons {
-  margin-top: 20px;
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
 }
 
-button {
-  background: #29b6f6;
-  color: white;
-  font-size: 20px;
-  border: none;
-  padding: 10px 20px;
-  margin: 0 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
+.carousel-item img {
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 3px solid white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .carousel-container {
+    height: 30vh;
+  }
+
+  .carousel-item img {
+    width: 250px;
+    height: 150px;
+  }
+
+  .carousel {
+    transform: translate(-50%, -50%) translateZ(-400px) rotateY(0deg);
+  }
 }
 
 @media screen and (min-width: 100px) and (max-width: 767px) {
-  .carousel__wrapper {
-    height: 53vh;
+  .carousel-container {
+    height: 30vh;
   }
 
-  .carousel__cell {
-    width: 300px; /* ← más ancho */
-    height: 200px; /* ← más alto */
+  .carousel-item img {
+    width: 200px;
+    height: 150px;
   }
 
-  .scene {
-  width: 300px;
-  height: 200px;
-}
-
+  .carousel {
+    transform: translate(-50%, -50%) translateZ(-300px) rotateY(0deg);
+  }
 }
