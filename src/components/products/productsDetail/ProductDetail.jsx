@@ -5,8 +5,8 @@ const products = [
   {
     id: "mermelada",
     title: "Mermelada con panela",
-    description:
-      "Un día soleado en el cultivo de caña de azúcar en el Valle del Cauca.",
+    description: "Hoy es un gran dia para.",
+    presentacion: ["Presentación: 250g", "Presentación: 250g"],
     images: [
       "../../../../images/imgProoducts/mermelada.jpg",
       "../../../../images/imgProoducts/fresa.jpg",
@@ -71,7 +71,18 @@ export default function ProductDetail() {
             ⟩
           </button>
         </div>
-        <p className="detalle__descripcion">{product.description}</p>
+        <div className="producto__detalle-information">
+          <p className="detalle__descripcion">{product.description}</p>
+          <ul className="detalle__presentacion">
+            {product.presentacion &&
+              product.presentacion.map((item, idx) => (
+                <li key={idx} className="detalle__presentacion-item">
+                  {item}
+                </li>
+              ))}
+          </ul>
+        </div>
+
         <button
           className="detalle__botton"
           onClick={() => navigate(`/productos`)}

@@ -7,7 +7,7 @@ export default function Products() {
       src: "../../../../images/imgProoducts/mermelada.jpg",
       title: "Mermelada con panela",
       description:
-        "Un día soleado en el cultivo de caña de azúcar en Sandoná Nariño.",
+        "Una gran variedad de sabores para todos los gustos.",
     },
     {
       id: "panela_cuadro",

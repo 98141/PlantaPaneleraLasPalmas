@@ -18,13 +18,13 @@ export default function Products() {
       src: "../../../../images/imgProoducts/panela_pulverizada.jpg",
       title: "Panela Pulverizada",
       description:
-        "Un día soleado en el cultivo de caña de azúcar en el Valle del Cauca.",
+        "Un día soleado en el cultivo de caña de azúcar.",
     },
     {
       src: "../../../../images/imgProoducts/panela_redonda.jpg",
       title: "Panela redonda",
       description:
-        "Extracción artesanal del jugo de la caña en un trapiche de madera.",
+        "Extracción artesanal del jugo de la caña en un trapiche panelero.",
     },
   ];
 
