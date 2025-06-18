@@ -51,6 +51,7 @@ export default function Company() {
                 </ul>
               )}
             </div>
+            
           ))}
         </div>
       </section>

@@ -1,8 +1,11 @@
 export default function Contact() {
-    return (
-        <div>
-            <h1>Contact</h1>
-            <p>This is the contact page.</p>
-        </div>
-    );
+  const phone = "573203385899";
+  const message = "Hola, estoy interesado en sus productos.";
+  const link = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+  return (
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      <button className="button__Whatsapp">📱 WhatsApp</button>
+    </a>
+  );
 }
