@@ -6,7 +6,7 @@ import Contact from "./contacto/Contact";
 import Information from "./Information/Information";
 import Company from "./company/Company";
 import Products from "./products/Products";
-import Videos from "./Videos/Videos";
+import Videos from "./video/Videos";
 import Main from "./main/main";
 import ProductDetail from "./products/productsDetail/ProductDetail";
 
