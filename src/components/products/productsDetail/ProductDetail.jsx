@@ -1,5 +1,11 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import mermelada from "../../../../images/imgProoducts/mermelada.jpg";
+import mermeladaFresa from "../../../../images/imgProoducts/fresa.jpg";
+import mermeladaPiña from "../../../../images/imgProoducts/piña.jpg";
+import cuadro from "../../../../images/imgProoducts/panela_cuadro.jpg";
+import pulverizada from "../../../../images/imgProoducts/panela_pulverizada.jpg";
+import redonda from "../../../../images/imgProoducts/panela_redonda.jpg";
 
 const products = [
   {
@@ -8,9 +14,9 @@ const products = [
     description: "Hoy es un gran dia para.",
     presentacion: ["Presentación: 250g", "Presentación: 250g"],
     images: [
-      "../../../../images/imgProoducts/mermelada.jpg",
-      "../../../../images/imgProoducts/fresa.jpg",
-      "../../../../images/imgProoducts/piña.jpg",
+      mermelada,
+      mermeladaFresa,
+      mermeladaPiña
     ],
   },
   {
@@ -18,21 +24,21 @@ const products = [
     title: "Panela Cuadrada ",
     description:
       "Extracción artesanal del jugo de la caña en un trapiche de madera.",
-    images: ["../../../../images/imgProoducts/panela_cuadro.jpg"],
+    images: [cuadro],
   },
   {
     id: "panela_pulverizada",
     title: "Panela Pulverizada",
     description:
       "Un día soleado en el cultivo de caña de azúcar en el Valle del Cauca.",
-    images: ["../../../../images/imgProoducts/panela_pulverizada.jpg"],
+    images: [pulverizada],
   },
   {
     id: "panela_redonda",
     title: "Panela redonda",
     description:
       "Extracción artesanal del jugo de la caña en un trapiche de madera.",
-    images: ["../../../../images/imgProoducts/panela_redonda.jpg"],
+    images: [redonda],
   },
 ];
 

@@ -1,31 +1,36 @@
 import { Link } from "react-router-dom";
+import mermelada from "../../../images/imgProoducts/mermelada.jpg";
+import cuadro from "../../../images/imgProoducts/panela_cuadro.jpg";
+import pulverizada from "../../../images/imgProoducts/panela_pulverizada.jpg";
+import redonda from "../../../images/imgProoducts/panela_redonda.jpg";
+
 
 export default function Products() {
   const images = [
     {
       id: "mermelada",
-      src: "../../../../images/imgProoducts/mermelada.jpg",
+      src: mermelada,
       title: "Mermelada con panela",
       description:
         "Una gran variedad de sabores para todos los gustos.",
     },
     {
       id: "panela_cuadro",
-      src: "../../../../images/imgProoducts/panela_cuadro.jpg",
+      src: cuadro,
       title: "Panela Cuadrada ",
       description:
         "Extracción artesanal del jugo de la caña en un trapiche de madera.",
     },
     {
       id: "panela_pulverizada",
-      src: "../../../../images/imgProoducts/panela_pulverizada.jpg",
+      src: pulverizada,
       title: "Panela Pulverizada",
       description:
         "Un día soleado en el cultivo de caña de azúcar en el Valle del Cauca.",
     },
     {
       id: "panela_redonda",
-      src: "../../../../images/imgProoducts/panela_redonda.jpg",
+      src: redonda,
       title: "Panela redonda",
       description:
         "Extracción artesanal del jugo de la caña en un trapiche de madera.",
