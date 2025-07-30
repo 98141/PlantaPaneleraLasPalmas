@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import About from "./about/about";
-import Contact from "./contact/Contact";
+import Contact from "./contacto/Contact";
 import Information from "./Information/Information";
 import Company from "./company/Company";
 import Products from "./products/Products";
