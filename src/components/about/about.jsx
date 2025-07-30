@@ -1,5 +1,6 @@
 import Carrusel from "./carrusel/carrusel";
 import Products from "./products/Products";
+import siembra from "../../../images/siembra_cana.png";
 
 export default function About() {
   return (
@@ -12,7 +13,7 @@ export default function About() {
           desde 2003.
         </p>
         <img
-          src="../../../images/siembra_cana.png"
+          src={siembra}
           alt="Imagen de una caña"
           className="about__message-img"
         />

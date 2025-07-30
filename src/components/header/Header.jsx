@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import NavBar from "../navBar/NavBar";
+import logo from "../../../images/PP_FINAL.png"; 
 
 export default function Header() {
   return (
@@ -8,7 +9,7 @@ export default function Header() {
         <Link to={`/`}>
           <img
             className="header__logo"
-            src="../../../images/PP FINAL.png"
+            src={logo}
             alt="Logo Planta Panelera las Palmas"
           />
         </Link>
