@@ -1,14 +1,19 @@
 import { useRef, useEffect, useState } from "react";
+import IMG1 from "../../../../images/imgCarrusel/imagen_1.jpg";
+import IMG2 from "../../../../images/imgCarrusel/imagen_2.jpg";
+import IMG3 from "../../../../images/imgCarrusel/imagen_3.jpg";
+import IMG4 from "../../../../images/imgCarrusel/imagen_4.jpg";
+import IMG5 from "../../../../images/imgCarrusel/imagen_5.jpeg";
+import IMG6 from "../../../../images/imgCarrusel/imagen_6.jpg";
 
 const images = [
-  "../../../../images/imgCarrusel/imagen_1.jpg",
-  "../../../../images/imgCarrusel/imagen_2.jpg",
-  "../../../../images/imgCarrusel/imagen_3.jpg",
-  "../../../../images/imgCarrusel/imagen_4.jpg",
-  "../../../../images/imgCarrusel/imagen_5.jpg",
-  "../../../../images/imgCarrusel/imagen_6.jpg",
-  "../../../../images/imgCarrusel/imagen_6.jpg",
-];
+  IMG1,
+  IMG2,
+  IMG3,
+  IMG4,
+  IMG5,
+  IMG6,
+]
 
 function Carrusel() {
   const carouselRef = useRef(null);
