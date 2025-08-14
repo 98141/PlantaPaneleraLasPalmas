@@ -4,6 +4,7 @@ import cuadro from "../../../images/imgProoducts/panela_cuadro.jpg";
 import pulverizada from "../../../images/imgProoducts/panela_pulverizada.jpg";
 import redonda from "../../../images/imgProoducts/panela_redonda.jpg";
 
+import PageHeader from "../pageHeader/PageHeader";
 
 export default function Products() {
   const images = [
@@ -11,8 +12,7 @@ export default function Products() {
       id: "mermelada",
       src: mermelada,
       title: "Mermelada con panela",
-      description:
-        "Una gran variedad de sabores para todos los gustos.",
+      description: "Una gran variedad de sabores para todos los gustos.",
     },
     {
       id: "panela_cuadro",
@@ -39,6 +39,15 @@ export default function Products() {
 
   return (
     <>
+      <section>
+        <PageHeader
+          eyebrow="Tradición panelera"
+          title="Planta Panelera Las Palmas"
+          subtitle="En cada cristal de panela, late el corazón del campo: sudor que endulza, tierra que nutre y manos sabias que transforman la caña en oro puro."
+          align="center"
+        />
+      </section>
+
       <section className="products">
         <div className="galeria">
           {images.map((img) => (

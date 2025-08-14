@@ -5,7 +5,7 @@ export default function Contact() {
 
   return (
     <section className="contact-section">
-      <h2>Contáctanos</h2>
+      <h1 className="about__title">Bienvenidos Planta Panelera Las Palmas</h1>
       <p>¿Tienes preguntas o deseas más información? ¡Estamos aquí para ayudarte!</p>
 
       <ul className="contact-info">

@@ -1,3 +1,6 @@
+import PageHeader from "../pageHeader/PageHeader";
+
+
 export default function Company() {
   const descripcion = [
     {
@@ -34,10 +37,22 @@ export default function Company() {
 
   return (
     <>
+      <section>
+        <PageHeader
+          eyebrow="Tradición panelera"
+          title="Planta Panelera Las Palmas"
+          subtitle="Transformamos la caña en panela con manos que honran la tierra y corazón que late por la comunidad. Nuestra esencia: pureza que alimenta, tradición que perdura."
+          align="center"
+        />
+      </section>
+
       <section className="company">
         <div className="filosofia orbe-animada">
           {descripcion.map((item, index) => (
-            <div key={index} className={`orbe-animada filosofia__item item-${index}`}>
+            <div
+              key={index}
+              className={`orbe-animada filosofia__item item-${index}`}
+            >
               <h3 className="filosofia__title">{item.title}</h3>
               {item.description && (
                 <p className="filosofia__descripcion">{item.description}</p>
@@ -51,7 +66,6 @@ export default function Company() {
                 </ul>
               )}
             </div>
-            
           ))}
         </div>
       </section>

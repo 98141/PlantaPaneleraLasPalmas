@@ -13,11 +13,7 @@ const products = [
     title: "Mermelada con panela",
     description: "Hoy es un gran dia para.",
     presentacion: ["Presentación: 250g", "Presentación: 250g"],
-    images: [
-      mermelada,
-      mermeladaFresa,
-      mermeladaPiña
-    ],
+    images: [mermelada, mermeladaFresa, mermeladaPiña],
   },
   {
     id: "panela_cuadro",
@@ -61,41 +57,43 @@ export default function ProductDetail() {
   };
 
   return (
-    <div className="producto__detalle">
-      <h1 className="detalle__titulo">{product.title}</h1>
-      <div className="detalle__contenido">
-        <div className="detalle__carousel">
-          <button className="carousel__btn" onClick={prevImage}>
-            ⟨
-          </button>
-          <img
-            src={product.images[index]}
-            alt={`Vista ${index + 1}`}
-            className="detalle__img"
-          />
-          <button className="carousel__btn" onClick={nextImage}>
-            ⟩
-          </button>
-        </div>
-        <div className="producto__detalle-information">
-          <p className="detalle__descripcion">{product.description}</p>
-          <ul className="detalle__presentacion">
-            {product.presentacion &&
-              product.presentacion.map((item, idx) => (
-                <li key={idx} className="detalle__presentacion-item">
-                  {item}
-                </li>
-              ))}
-          </ul>
-        </div>
+    <section>
+      <div className="producto__detalle">
+        <h1 className="detalle__titulo">{product.title}</h1>
+        <div className="detalle__contenido">
+          <div className="detalle__carousel">
+            <button className="carousel__btn" onClick={prevImage}>
+              ⟨
+            </button>
+            <img
+              src={product.images[index]}
+              alt={`Vista ${index + 1}`}
+              className="detalle__img"
+            />
+            <button className="carousel__btn" onClick={nextImage}>
+              ⟩
+            </button>
+          </div>
+          <div className="producto__detalle-information">
+            <p className="detalle__descripcion">{product.description}</p>
+            <ul className="detalle__presentacion">
+              {product.presentacion &&
+                product.presentacion.map((item, idx) => (
+                  <li key={idx} className="detalle__presentacion-item">
+                    {item}
+                  </li>
+                ))}
+            </ul>
+          </div>
 
-        <button
-          className="detalle__botton"
-          onClick={() => navigate(`/productos`)}
-        >
-          Ver más
-        </button>
+          <button
+            className="detalle__botton"
+            onClick={() => navigate(`/productos`)}
+          >
+            Ver más
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

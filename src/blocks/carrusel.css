@@ -1,64 +1,64 @@
-.carousel-container {
+/* src/pages/about/carrusel/carrusel.css */
+
+.carousel-container{
+  --z: 560px;
   width: 100%;
-  height: 50vh;
+  height: 100vh; /* pantalla completa */
+  display: grid;
+  place-items: center;
+  perspective: 1200px;
+  overflow: visible;
   position: relative;
-  perspective: 1500px;
+  background: linear-gradient(180deg, #0000000a, #00000008);
 }
 
-.carousel {
-  position: absolute;
-  top: 25%;
-  left: 50%;
+.carousel{
+  position: relative; /* entra al flujo */
   transform-style: preserve-3d;
-  transition: none;
+  transition: transform 900ms cubic-bezier(.2,.65,.2,1);
+  will-change: transform;
 }
 
-.carousel.active {
-  transition: transform 1s ease-in-out;
-}
-
-.carousel-item {
+.carousel-item{
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%; left: 50%;
   transform-style: preserve-3d;
+  translate: -50% -50%;
 }
 
-.carousel-item img {
-  width: 350px;
-  height: 250px;
+.carousel-item img{
+  width: clamp(220px, 34vw, 520px);
+  aspect-ratio: 4 / 3;
+  height: auto;
   object-fit: cover;
-  border-radius: 16px;
-  border: 3px solid white;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  border-radius: 18px;
+  border: 3px solid #fff;
+  box-shadow: 0 10px 26px rgba(0,0,0,.18);
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .carousel-container {
-    height: 30vh;
-  }
+/* Controles */
+.carousel-controls{
+  position: absolute;
+  bottom: clamp(10px, 3vh, 28px);
+  left: 50%;
+  translate: -50% 0;
+  display: flex;
+  gap: 14px;
+}
+.carousel__btn{
+  background-color: var(--panela);
+  border: none;
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 999px;
+  transition: background-color .25s ease, transform .1s ease;
+}
+.carousel__btn:hover{ background-color: var(--panela-700); }
+.carousel__btn:active{ transform: scale(.98); }
 
-  .carousel-item img {
-    width: 250px;
-    height: 150px;
-  }
-
-  .carousel {
-    transform: translate(-50%, -50%) translateZ(-400px) rotateY(0deg);
-  }
+@media (prefers-reduced-motion: reduce){
+  .carousel{ transition: none; }
 }
 
-@media screen and (min-width: 100px) and (max-width: 767px) {
-  .carousel-container {
-    height: 30vh;
-  }
-
-  .carousel-item img {
-    width: 200px;
-    height: 150px;
-  }
-
-  .carousel {
-    transform: translate(-50%, -50%) translateZ(-300px) rotateY(0deg);
-  }
-}
