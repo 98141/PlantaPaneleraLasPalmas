@@ -1,4 +1,4 @@
-import Carrusel from "./carrusel/Carrusel";
+import Carrusel from "./carrusel/carrusel";
 import Products from "./products/Products";
 import siembra from "../../../images/siembra_cana.png";
 import PageHeader from "../pageHeader/PageHeader";
