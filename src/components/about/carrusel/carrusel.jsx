@@ -1,8 +1,8 @@
 // src/pages/about/carrusel/Carrusel.jsx
 import { useEffect, useMemo, useRef, useState } from "react";
-import IMG1 from "../../../../images/imgCarrusel/imagen_1.jpg";
-import IMG2 from "../../../../images/imgCarrusel/imagen_2.jpg";
-import IMG3 from "../../../../images/imgCarrusel/imagen_3.jpg";
+import IMG1 from "../../../assets/panela.JPG";
+import IMG2 from "../../../assets/cultivo.JPG";
+import IMG3 from "../../../assets/miel.JPG";
 import IMG4 from "../../../../images/imgCarrusel/imagen_4.jpg";
 import IMG5 from "../../../../images/imgCarrusel/imagen_5.jpeg";
 import IMG6 from "../../../../images/imgCarrusel/imagen_6.jpg";

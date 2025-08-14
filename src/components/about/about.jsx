@@ -9,7 +9,7 @@ export default function About() {
       <section>
         <PageHeader
           eyebrow="Tradición panelera"
-          title="Bienvenidos a Planta Panelera Las Palmas"
+          title="Bienvenidos, Planta Panelera Las Palmas"
           subtitle="Dulce sabor desde 2003 — panela natural elaborada con prácticas artesanales y calidad consistente."
           align="center"
         />
@@ -20,9 +20,6 @@ export default function About() {
       </section>
 
       <section className="about__message" aria-labelledby="about-msg-title">
-        <h2 id="about-msg-title" className="sr-only">
-          Quiénes somos
-        </h2>
         <p className="about__message-paragraph">
           Somos una empresa líder en la producción de panela de caña de azúcar,
           desde 2003.
