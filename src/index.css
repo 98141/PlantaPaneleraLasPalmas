@@ -1,10 +1,11 @@
 
-@import url("../blocks/footer.css");
-@import url("../blocks/header.css");
-@import url("../blocks/about.css");
-@import url("../blocks/app.css");
-@import url("../blocks/carrusel.css");
-@import url("../blocks/products.css");
-@import url("../blocks/company.css");
-@import url("../blocks/contact.css");
-@import url("../blocks/main.css");
+@import url("./blocks/footer.css");
+@import url("./blocks/header.css");
+@import url("./blocks/about.css");
+@import url("./blocks/app.css");
+@import url("./blocks/carrusel.css");
+@import url("./blocks/products.css");
+@import url("./blocks/company.css");
+@import url("./blocks/contact.css");
+@import url("./blocks/main.css");
+@import url("./blocks/navBar.css");

@@ -1,0 +1,76 @@
+/* ===== Paleta de tu sitio (conservada) ===== */
+:root {
+  --bg-cream: #f8f1e4; /* fondo general */
+  --text-brown: #4a3f35; /* texto */
+  --brand-brown: #6a4f3a; /* header */
+  --accent-gold: #d1a677; /* activo / acento */
+  --accent-gold-2: #e7c6a0; /* hover suave */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-cream);
+  color: var(--text-brown);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== Header ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(
+    180deg,
+    #724e39 0%,
+    var(--brand-brown) 65%,
+    #5b4030 100%
+  );
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 16px;
+}
+
+.header__logo {
+  width: 170px;
+  height: 130px;
+  object-fit: contain;
+}
+
+.header__title {
+  margin-right: 200px;
+  color: #fff;
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header__container {
+    flex-direction: column;
+    padding: 12px 16px;
+  }
+  .header__title {
+    margin-right: 0;
+  }
+}
+
+/* Móvil */
+@media (max-width: 767px) {
+  .header__container {
+    flex-direction: column;
+    padding: 10px 12px;
+  }
+  .header__title {
+    margin-right: 0;
+    font-size: 25px;
+  }
+}

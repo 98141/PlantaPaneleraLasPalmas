@@ -1,0 +1,241 @@
+/* ===== Paleta (misma que header) ===== */
+:root {
+  --bg-cream: #f8f1e4;
+  --text-brown: #4a3f35;
+  --brand-brown: #6a4f3a;
+  --accent-gold: #d1a677;
+  --accent-gold-2: #e7c6a0;
+}
+
+/* Contenedor del navbar (vive dentro del header) */
+.navbar-container.simple {
+  width: 100%;
+  color: #fff;
+  background: transparent; /* usa el fondo del header */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+/* Marca */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  color: #fff; /* color de enlaces/íconos dentro de brand */
+}
+
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+}
+
+/* Texto con degradado: dorado → dorado claro → crema */
+.brand-name {
+  font-family: Montserrat, Poppins, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  font-size: 1.08rem;
+  background: linear-gradient(
+    90deg,
+    var(--accent-gold) 0%,
+    var(--accent-gold-2) 45%,
+    var(--bg-cream) 95%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* un brillo sutil para contraste sobre el fondo café */
+  text-shadow: 0 0 10px rgba(209, 166, 119, 0.25);
+  transition: filter 0.2s ease, opacity 0.2s ease;
+}
+
+/* Hover suave (opcional) */
+.brand:hover .brand-name {
+  filter: brightness(1.05);
+  opacity: 0.98;
+}
+
+/* Menú desktop/tablet */
+.nav-center {
+  display: none;
+}
+
+.menu-root {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  margin: 0;
+}
+
+.menu__link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease,
+    box-shadow 0.18s ease;
+}
+
+.menu__link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.menu__link_active,
+.menu__link.active {
+  color: #1f150e; /* legible sobre dorado */
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-2));
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18) inset;
+}
+
+/* Hamburguesa (visible en móvil) */
+.burger {
+  display: block;
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  padding: 0;
+}
+
+.burger span {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s ease, top 0.2s ease, opacity 0.2s ease;
+}
+
+.burger span:nth-child(1) {
+  top: 11px;
+}
+
+.burger span:nth-child(2) {
+  top: 18px;
+}
+.burger span:nth-child(3) {
+  top: 25px;
+}
+
+.burger.active span:nth-child(1) {
+  top: 18px;
+  transform: rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  top: 18px;
+  transform: rotate(-45deg);
+}
+
+/* Drawer móvil */
+.drawer {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 82%;
+  max-width: 360px;
+  background: #5a4030; /* tono del header más oscuro */
+  transform: translateX(-100%);
+  transition: transform 0.22s ease;
+  z-index: 90;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.drawer.open {
+  transform: translateX(0);
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.drawer-title {
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.drawer-close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.drawer-content {
+  padding: 0.35rem 0.9rem 1rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.drawer-link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.75rem 0.5rem;
+  border-radius: 10px;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.drawer-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.drawer-link.active {
+  color: #1f150e;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-2));
+  font-weight: 800;
+}
+
+/* Backdrop */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 85;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .nav-center {
+    display: block;
+  }
+
+  .burger,
+  .drawer,
+  .backdrop {
+    display: none;
+  }
+
+  .brand-name {
+    font-size: 1.02rem;
+  }
+}
