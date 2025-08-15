@@ -44,7 +44,7 @@ export default function NavBar() {
       <div className="nav-left">
         <NavLink to="/" className="brand">
           <img src={logo} alt="Tejiendo Raíces" className="brand-logo" />
-          <span className="brand-name">Tejiendo&nbsp;Raíces</span>
+          <span className="brand-name">Planta&nbsp;Panelera las Palmas</span>
         </NavLink>
       </div>
 
