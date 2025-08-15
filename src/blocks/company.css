@@ -1,83 +1,85 @@
-/* ====== FILOSOFÍA en ZIGZAG (uno por fila) ====== */
-
-.filosofia{
+.filosofia {
   position: relative;
   max-width: 1200px;
   margin: clamp(12px, 3vw, 32px) auto;
   padding: 0 clamp(12px, 3vw, 24px);
   display: grid;
-  grid-template-columns: 1fr;         /* una sola columna */
+  grid-template-columns: 1fr; /* una sola columna */
   gap: clamp(18px, 2.8vw, 30px);
-  font-family: "Outfit", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: "Outfit", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, Arial, sans-serif;
 }
 
-/* Línea central del timeline */
-.filosofia::before{
-  content:"";
-  position:absolute;
+.filosofia::before {
+  content: "";
+  position: absolute;
   left: 50%;
   top: 0;
   transform: translateX(-50%);
   width: 4px;
   height: 100%;
-  background: linear-gradient(180deg, rgba(209,153,21,.25), rgba(122,161,99,.25));
+  background: linear-gradient(
+    180deg,
+    rgba(209, 153, 21, 0.25),
+    rgba(122, 161, 99, 0.25)
+  );
   border-radius: 999px;
   pointer-events: none;
 }
 
-/* Tarjeta base */
-.filosofia__item{
+.filosofia__item {
   width: min(720px, 92vw);
-  background:
-    linear-gradient(#fff, #fff) padding-box,
-    linear-gradient(90deg, rgba(209,153,21,.35), rgba(122,161,99,.35)) border-box;
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(90deg, rgba(209, 153, 21, 0.35), rgba(122, 161, 99, 0.35))
+      border-box;
   border: 1px solid transparent;
   border-radius: 16px;
   padding: clamp(16px, 3vw, 28px);
-  box-shadow: 0 10px 22px rgba(0,0,0,.10);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
   display: grid;
   gap: 10px;
   text-align: left;
-  transition: transform .18s ease, box-shadow .18s ease;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-/* Alterna alineación: impar a la izquierda, par a la derecha */
-.filosofia__item:nth-child(odd){  justify-self: start; }
-.filosofia__item:nth-child(even){ justify-self: end;   }
+.filosofia__item:nth-child(odd) {
+  justify-self: start;
+}
+.filosofia__item:nth-child(even) {
+  justify-self: end;
+}
 
-/* Conector (punto) hacia la línea central */
-.filosofia__item::before{
-  content:"";
-  position:absolute;
+.filosofia__item::before {
+  content: "";
+  position: absolute;
   top: 50%;
   translate: 0 -50%;
-  width: 14px; height: 14px;
+  width: 14px;
+  height: 14px;
   border-radius: 999px;
   background: conic-gradient(from 180deg, #d19915, #f7c86b, #7aa163);
-  box-shadow: 0 0 0 4px #fff, 0 0 0 6px rgba(209,153,21,.25);
+  box-shadow: 0 0 0 4px #fff, 0 0 0 6px rgba(209, 153, 21, 0.25);
 }
 
-/* Punto a la derecha para ítems de la izquierda (impares) */
-.filosofia__item:nth-child(odd)::before{
-  right: -30px;   /* ajusta si lo quieres más cerca/lejos de la línea */
+.filosofia__item:nth-child(odd)::before {
+  right: -30px; 
 }
 
-/* Punto a la izquierda para ítems de la derecha (pares) */
-.filosofia__item:nth-child(even)::before{
+
+.filosofia__item:nth-child(even)::before {
   left: -30px;
 }
 
-/* Hover sutil */
-.filosofia__item:hover{
+
+.filosofia__item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(0,0,0,.14);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
 }
 
-/* Título potente */
-.filosofia__title{
+.filosofia__title {
   margin: 0;
   font-weight: 900;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
   line-height: 1.15;
   text-wrap: balance;
   font-size: clamp(1.25rem, 1vw + 1.1rem, 1.9rem);
@@ -88,8 +90,7 @@
   position: relative;
 }
 
-/* Subrayado del título */
-.filosofia__title::after{
+.filosofia__title::after {
   content: "";
   display: block;
   height: 6px;
@@ -97,58 +98,60 @@
   margin-top: 8px;
   border-radius: 999px;
   background: linear-gradient(90deg, #d19915, #f7c86b);
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,.12));
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
 }
 
-/* Texto y lista */
-.filosofia__descripcion{
+.filosofia__descripcion {
   margin: 2px 0 0;
   color: #555;
   line-height: 1.6;
-  font-size: clamp(1rem, .4vw + 1rem, 1.12rem);
+  font-size: clamp(1rem, 0.4vw + 1rem, 1.12rem);
 }
-.filosofia__lista{
+.filosofia__lista {
   list-style: none;
   margin: 10px 0 0;
   padding: 0;
   display: grid;
   gap: 8px;
 }
-.filosofia__lista li{
+.filosofia__lista li {
   position: relative;
   padding-left: 26px;
   color: #222;
   line-height: 1.55;
-  font-size: clamp(1rem, .4vw + 1rem, 1.1rem);
+  font-size: clamp(1rem, 0.4vw + 1rem, 1.1rem);
 }
-.filosofia__lista li::before{
+.filosofia__lista li::before {
   content: "";
   position: absolute;
-  left: 0; top: .6em;
-  width: 10px; height: 10px; border-radius: 50%;
+  left: 0;
+  top: 0.6em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
   background: linear-gradient(90deg, #d19915, #f7c86b);
-  box-shadow: 0 0 0 2px rgba(209,153,21,.25);
+  box-shadow: 0 0 0 2px rgba(209, 153, 21, 0.25);
 }
 
-/* ===== Responsivo ===== */
-@media (max-width: 768px){
-  .filosofia::before{
-    left: 24px; transform: none; /* línea a la izquierda en móvil */
+@media (max-width: 768px) {
+  .filosofia::before {
+    left: 24px;
+    transform: none; 
   }
-  .filosofia__item{
-    justify-self: stretch !important;  /* todos al ancho disponible */
+  .filosofia__item {
+    justify-self: stretch !important; /* todos al ancho disponible */
     width: 100%;
     padding-left: clamp(18px, 4vw, 28px);
   }
-  .filosofia__item::before{
-    left: 14px; right: auto;           /* punto siempre hacia la línea izquierda */
+  .filosofia__item::before {
+    left: 14px;
+    right: auto; 
   }
 }
 
-/* Reduce motion: sin animaciones */
-@media (prefers-reduced-motion: reduce){
+@media (prefers-reduced-motion: reduce) {
   .filosofia__item,
-  .filosofia__item:hover{
+  .filosofia__item:hover {
     transition: none;
     transform: none;
   }
